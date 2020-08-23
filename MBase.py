@@ -319,35 +319,6 @@ def getDocPath( sw=None, open=False ):
     
 
 
-def getMAC( as_hex=False ):
-    '''
-    https://docs.python.org/2/library/functions.html#hex            Convert an integer number (of any size) to a lowercase hexadecimal string prefixed with "0x".
-    https://docs.python.org/2/library/uuid.html#uuid.getnode        Get the hardware address as a 48-bit positive integer.
-    '''
-    mac = uuid.getnode()
-
-    if as_hex:
-        return hex( mac )[2:-1]
-    else:
-        return mac
-
-def getPasswords( length=14, as_string=False ):
-    passwords = ''
-    for i in range( length ):
-        passwords += str(random.randint(0,9))
-    
-    if as_string:
-        return passwords            
-    else:
-        return int( passwords )     # 53858123756340
-
-def getRandomOrder( length=14 ):
-    order = range( length )
-    random.shuffle( order )
-    return order                    # [13, 10, 7, 3, 9, 11, 1, 6, 4, 12, 0, 5, 2, 8]
-
-
-
 
 
 
