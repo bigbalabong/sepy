@@ -323,7 +323,6 @@ def getDocPath( sw=None, open=False ):
 
 
 
-
 ###########################################################################
 ############################### Easy-to-use ###############################
 ###########################################################################
@@ -484,7 +483,10 @@ def isSequence( var ):
     Returns:
         [bool]: [description]
     """
-    return isinstance( var, collections.Sequence )
+    if isinstance( var, str ):
+        return False
+    else:
+        return isinstance( var, collections.Sequence )
 
 
 

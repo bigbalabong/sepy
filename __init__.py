@@ -99,3 +99,20 @@ if os.path.exists( os.path.join( __file__, '../MWeb.py' ) ):
 
 
 
+
+# ======================================================== #
+# ======================== Tier: 3 ======================= #
+# ======================================================== #
+
+if os.path.exists( os.path.join( __file__, '../MCipher.py' ) ):
+    from . import MCipher
+    reload(MCipher)
+    Cipher = MCipher.Cipher
+
+
+
+
+
+
+
+
